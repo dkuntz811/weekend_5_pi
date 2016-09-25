@@ -1,4 +1,10 @@
 <h1>Let's Add Some Pets!!</<1>
-	<div>
-     
+	<div ng-controller = "addController">
+     <form>
+			 <input type = "text" ng-model = "name" placholder = "Pet Name">
+			 <input type = "text" ng-model = "animal" placholder = "Pet Type">
+			 <input type = "number" ng-model = "age" placholder = "Pet Age">
+			 <input type = "text" ng-model = "imageurl" placholder = "Pet Photo URL">
+			 <button ng-click="addPet()">Submit</button>
+		 </form>
 	</div>

@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 console.log('in user model');
 
-var userSchema = new Schema({
+var petSchema = new Schema({
 	name: String,
 	animal: String,
 	age: Number,
@@ -10,6 +10,6 @@ var userSchema = new Schema({
 
 });
 
-var User = mongoose.model('users', userSchema);
+var Pet = mongoose.model('pets', petSchema);
 
-module.exports = User;
+module.exports = Pet;
