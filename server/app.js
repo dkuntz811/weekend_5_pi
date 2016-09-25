@@ -3,12 +3,29 @@ var express = require('express');
 var path = require('path');
 //express is a function the function is middleware
 var app = express();
+var mongoose = require('mongoose');
 //app.set is a setter. It sets the port for the app
 //set the port to process.env.port Heroku has a process.env.port
 //this will allow us to send it to Heroku later. We use 5000 as a localhost as we build the app.
 app.set('port', (process.env.PORT || 6060));
 //This is a catch all route. Any request that come in it ends up in this function
 //When the request comes in, it gets fed into
+var mongoURI = "mongodb://localhost:27017/assignments";//location of database like connectionString in postgress
+var MongoDB = mongoose.connect(mongoURI).connection;//mongoose connection to mongo
+
+//routers
+
+
+
+
+MongoDB.on('error', function (err) {//if there is an error connecting to the database, let me know
+    console.log('mongodb connection error:', err);
+});
+
+MongoDB.once('open', function () {//open connection to mongo
+  console.log('mongodb connection open!');
+});
+
 app.get('/*', function (req, res){
 	console.log(req.params[0]);
 	var file = req.params[0] || "/views/index.html";
