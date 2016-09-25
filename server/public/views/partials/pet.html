@@ -1,0 +1,11 @@
+<div ng-controller = "petController">
+	<h1>Here is our Pi Pet Collection<h1>
+		<section ng-repeat="pet in allPets ">
+			Pet Name: {{pet.name}}<br>
+      Pet Type: {{pet.animal}}<br>
+      Pet Age: {{pet.age}}<br>
+      <img src="{{pet.imageurl}}"/> <br><br>
+			<button ng-click="deletePet()">Delete Pet</button>
+		</section>
+
+</div>

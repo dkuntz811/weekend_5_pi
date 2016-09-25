@@ -43,6 +43,17 @@ router.post ('/addPet', function (req, res){
 	});//end save function
 });//end router.post
 
+router.delete('/:id', function(req, res){
+	var id = req.params.id;
+	newPet.findByIdAndRemove(id, function(err){
+		if(err){
+			res.sendStatus(500);
+			return;
+		}
+		res.sendStatus(204);
+	});//end findByIdAndRemove
+}); //end router.delete
+
 
 
 

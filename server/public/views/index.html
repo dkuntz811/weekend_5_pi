@@ -9,6 +9,8 @@
 		<script src="scripts/controllers/homeController.js"></script>
 		<script src="scripts/controllers/addController.js"></script>
 		<script src="scripts/controllers/petController.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 
 
 	</head>
@@ -16,11 +18,13 @@
 		<h1>Pi's Pet Emporium</h1>
 	</header>
 	<body>
-		<ul>
+		<div class="navbar navbar-inverse">
+		<ul class = "nav navbar-nav"class="navbar navbar-inverse">
 				<li><a href="#home">Home</a></li>
 				<li><a href="#add">Add Pets</a></li>
 				<li><a href="#pet">My Pets</a></li>
 			</ul>
+		</div>
 	</body>
 	<main ng-view>
 	</main>
