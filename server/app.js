@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 //app.set is a setter. It sets the port for the app
 //set the port to process.env.port Heroku has a process.env.port
 //this will allow us to send it to Heroku later. We use 5000 as a localhost as we build the app.
-app.set('port', (process.env.PORT || 6060));
+app.set('port', (process.env.PORT || 7070));
 //This is a catch all route. Any request that come in it ends up in this function
 //When the request comes in, it gets fed into
 var mongoURI = "mongodb://localhost:27017/assignments";//location of database like connectionString in postgress
@@ -32,7 +32,7 @@ MongoDB.once('open', function () {//open connection to mongo
 });
 
 app.get('/*', function (req, res){
-	console.log(req.params[0]);
+	
 	var file = req.params[0] || "/views/index.html";
 	//var file = "/views/index.html"
 	//path.join packages
