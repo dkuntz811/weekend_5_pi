@@ -15,6 +15,11 @@ var MongoDB = mongoose.connect(mongoURI).connection;//mongoose connection to mon
 
 //routers
 
+var userRouter = require('../routes/userRouter');
+
+// use routers
+app.use('/user', userRouter);
+
 
 
 
