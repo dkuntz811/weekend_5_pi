@@ -43,9 +43,9 @@ router.post ('/addPet', function (req, res){
 	});//end save function
 });//end router.post
 
-router.delete('/:id', function(req, res){
-	var id = req.params.id;
-	newPet.findByIdAndRemove(id, function(err){
+router.delete('/delete/:id', function(req, res){
+	var id = req.params_id;
+	newPet.findByIdAndRemove(_id, function(err){
 		if(err){
 			res.sendStatus(500);
 			return;

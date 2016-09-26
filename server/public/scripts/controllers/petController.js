@@ -14,11 +14,13 @@ myApp.controller('petController', ['$scope','$http', function($scope, $http){
 
 	getAll();
 
-	var deletePet = function(id){
+$scope.deletePet = function(id){
 		console.log('in deletePet');
+	   var id = pet._id;
+		console.log('id is', id);
 		$http({
 			method: 'DELETE',
-			url: 'user/delete' + id,
+			url: '/user/' + id,
 		}).then(function(response){
 			console.log('delete pet', id);
 			getAll();

@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.set('port', (process.env.PORT || 5050));
 //This is a catch all route. Any request that come in it ends up in this function
 //When the request comes in, it gets fed into
-var mongoURI = "mongodb://localhost:27017/assignments";//location of database like connectionString in postgress
+var mongoURI = "mongodb://localhost:27017/petsForPi";//location of database like connectionString in postgress
 var MongoDB = mongoose.connect(mongoURI).connection;//mongoose connection to mongo
 
 //routers
